@@ -53,3 +53,6 @@ print(f"Accepted:{statystyki['Accepted']}, Served:{statystyki['Served']}, Pendin
 
 print("Kategorie")
 
+for kategoria, lista in obsluzone_zgloszenia.items():
+    print(f"{kategoria}: {sum(lista)}")
+
