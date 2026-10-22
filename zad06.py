@@ -51,8 +51,7 @@ while kolejka:
 print("\nPodsumowanie")
 print(f"Accepted:{statystyki['Accepted']}, Served:{statystyki['Served']}, Pending:{statystyki['Served']}")
 
-print("Kategorie")
+print("\nKategorie")
 
 for kategoria, lista in obsluzone_zgloszenia.items():
-    print(f"{kategoria}: {sum(lista)}")
-
+    print(f"{kategoria}: {len(lista)}")
