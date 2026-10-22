@@ -10,7 +10,7 @@ S["age"] = 20
 
 print(S)
 
-S.pop("hobby")
+_ = S.pop("hobby")
 
 print(S)
 
