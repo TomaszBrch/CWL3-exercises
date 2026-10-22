@@ -2,7 +2,6 @@ import sys
 
 try:
     with open("tekst.txt", "r") as f:
-        #code
         tekst = f.read()
 except FileNotFoundError:
     print("Error: file does not exist")
