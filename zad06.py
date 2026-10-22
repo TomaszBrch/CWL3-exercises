@@ -27,6 +27,9 @@ statystyki: dict[str, int] = {
 
 licznik = 0
 
+print(f"{'step':<5} | {'id':<4} | {'category':<8} | {'pending':<7}")
+print("-" * 33)
+
 while kolejka:
     obsluzone: tuple[int, str] =kolejka.popleft()
 
@@ -38,9 +41,15 @@ while kolejka:
     statystyki["Served"] += 1
     statystyki["Pending"] -= 1
 
-    print(f"Step: {licznik}, Accepted: {statystyki['Accepted']}, Served: {statystyki['Served']}, Pending: {statystyki['Pending']}")
+    print(f"{licznik:<5} | {numer:<4} | {kategoria:<8} | {statystyki["Pending"]:<7}")
 
     if kategoria not in obsluzone_zgloszenia:
         _ = obsluzone_zgloszenia.setdefault(kategoria, [])
     
     obsluzone_zgloszenia[kategoria].append(numer)
+
+print("\nPodsumowanie")
+print(f"Accepted:{statystyki['Accepted']}, Served:{statystyki['Served']}, Pending:{statystyki['Served']}")
+
+print("Kategorie")
+
