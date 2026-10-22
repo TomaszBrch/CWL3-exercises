@@ -1,4 +1,4 @@
-S = {"name":"Tomasz", "age":19, "surname":"Kowalski", "country":"Poland", "birth_year":2007 }
+S: dict[str, str | int] = {"name":"Tomasz", "age":19, "surname":"Kowalski", "country":"Poland", "birth_year":2007 }
 
 print(S)
 
@@ -18,6 +18,6 @@ print(S.get("hobby", "key not found"))
 
 print(S.items())
 
-S2 = {"Warsaw":"Poland", "Berlin":"Germany", "Rio":"Brazil", "Tokyo":"Japan"}
+S2: dict[str, str] = {"Warsaw":"Poland", "Berlin":"Germany", "Rio":"Brazil", "Tokyo":"Japan"}
 
 print(S | S2)
