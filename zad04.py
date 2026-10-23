@@ -16,7 +16,7 @@ for name, grade, group in students:
     student_groups.setdefault(group, []).append(grade)
 
 for group, grades in student_groups.items():
-    print(f"Group: {group}, count: {len(grades)}, average: {sum(grades)/len(grades)}")
+    print(f"{group}: count={len(grades)}, average={round(sum(grades)/len(grades),2)}")
 
 print(f"Groups: {len(student_groups)}")
 
